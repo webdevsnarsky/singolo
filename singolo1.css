@@ -1,3 +1,30 @@
+/* @font-face {
+	font-family: 'LatoBlack';
+	font-display: swap;
+	src: url('assets/fonts/Lato-Black.eot');
+	src: local('☺'), url('assets/fonts/Lato-Black.woff') format('woff'), url('assets/fonts/Lato-Black.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+} */
+
+
+@font-face {
+  font-family: 'LatoBlack';
+  src: url('assets/fonts/Lato-Black.woff2') format('woff2'),
+       url('assets/fonts/Lato-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoBold';
+  src: url('assets/fonts/Lato-Bold.woff2') format('woff2'),
+       url('assets/fonts/Lato-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* basic settings  */
+
 * {
   margin: 0;
   padding: 0;
@@ -27,4 +54,96 @@ ul[class],
 ol[class] {
   list-style: none;
   padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+
+}
+/* HEADER */
+.header {
+  background-color: #2D303A;
+  height: 95px;
+}
+
+.header::after {
+  content: " ";
+  position: absolute; 
+  top: 89px;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background-color: #323746;
+}
+
+.header__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  color: #FFFFFF;
+}
+
+.logo {
+  text-decoration: none;
+  /* height: 100%; */
+}
+
+.logo h1 {
+  position: relative;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: 'LatoBold', sans-serif;
+  font-size: 1.56em;
+  letter-spacing: -0.046rem;
+  line-height: 93px;
+}
+
+.logo h1::after {
+  position: absolute;
+  content: "\002A";
+  color: #f06c64;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation__item {
+  position: relative;
+  padding-top: 8px;
+  margin-left: 29px;
+}
+
+.navigation__item::after {
+  position: absolute;
+  content: " ";
+  width: 2px;
+  height: 2px;
+  background-color: #494e62;
+  top: 15px;
+  left: -15px;
+  border-radius: 50%;
+}
+
+.navigation  .navigation__item:first-child:after {
+  content: none;
+}
+
+.navigation__item a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: 'LatoBold', sans-serif;
+  font-size: 12px;
+  letter-spacing: -0.005rem;
+}
+
+.navigation__item a:hover {
+  color: #f06c64;
 }
