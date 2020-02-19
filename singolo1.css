@@ -96,9 +96,12 @@ ol[class] {
 
 .header__content {
   position: relative;
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   padding: 0 40px;
   color: #FFFFFF;
 }
@@ -125,6 +128,7 @@ ol[class] {
 }
 
 .navigation {
+  display: -webkit-box;
   display: flex;
 }
 
@@ -187,9 +191,12 @@ ol[class] {
 }
 
 .slider__item {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   padding: 23px 0;
 }
 
@@ -259,14 +266,17 @@ ol[class] {
 }
 
 .services__advantages {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 43px;
 
 }
 
 .item {
+  display: -webkit-box;
   display: flex;
   max-width: 300px;
 }
