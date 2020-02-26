@@ -1,0 +1,9 @@
+@import "/singolo1.css" screen;
+
+@font-face {
+  font-family: 'LatoRegular';
+  src: url('assets/fonts//Lato-Regular.woff2') format('woff2'),
+       url('assets/fonts//Lato-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
