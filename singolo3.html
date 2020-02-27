@@ -18,21 +18,28 @@
         <div class="quote__inner">
           <div class="quote__form">
             <form action="POST" class="form">
-              <fieldset>
-                <input name="name" type="text" placeholder="Name (Required)" class="form-control">
-                <input name="email" type="email" placeholder="Email (Required)" class="form-control">
-                <input name="subject" type="text" placeholder="Subject" class="form-control">
-                <textarea name="textarea" placeholder="Describe your project in detail..." class="form-control"></textarea>
-                <button type="submit">Submit</button>
-              </fieldset>
+                <input name="name" type="text" placeholder="Name (Required)" class="form-control form-inpt" required>
+                <input name="email" type="email" placeholder="Email (Required)" class="form-control form-inpt" required>
+                <input name="subject" type="text" placeholder="Subject" class="form-control form-inpt">
+                <textarea name="textarea" placeholder="Describe your project in detail..." class="form-control form-textarea"></textarea>
+                <button type="submit" class="form-button">Submit</button>
             </form>
           </div>
           <div class="quote__contacts">
             <h3 class="quote__contacts__title">Contact Information</h3>
             <p class="quote__contacts__descr">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
-            <p class="quote__contacts__location">Elm St. 14/05 Lost City </p>
-            <a href="tel:035283318635" class="quote__contacts__phone">03528 331 86 35</a>
-            <a href="mailto:info@singolo.com" class="quote__contacts__email">info@singolo.com</a>
+            <p class="quote__contacts__location">
+              <span>
+              <object data="assets/img/quote/location.svg" type="image/svg+xml"></object>
+            </span>Elm St. 14/05 Lost City 
+            </p>
+            <a href="tel:035283318635" class="quote__contacts__phone">
+            <object data="assets/img/quote/phone.svg" type="image/svg+xml"></object>03528 331 86 35</a>
+              <a href="mailto:info@singolo.com" class="quote__contacts__email">
+              <span>
+                <object data="assets/img/quote/email.svg" type="image/svg+xml"></object>
+              </span>
+              info@singolo.com</a>
           </div>
         </div>
         <!-- /.quote__form -->
@@ -41,9 +48,9 @@
   </section>
   <footer class="footer">
     <div class="container">
-      <div class="footer__container">
+      <div class="footer__content">
         <div class="footer__copy">
-          <p class="footer__copy__text">Describe your project in detail...</p>
+          <p class="footer__copy__text">&copy; Copyright 2013</p>
         </div>
         <div class="footer__social">
           <a href="#"><object class="social__links" data="assets/img/about/ico-facebook.svg" type="image/svg+xml"></object></a>
@@ -56,3 +63,4 @@
   </footer>
 </body>
 </html>
+
