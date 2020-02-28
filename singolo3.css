@@ -33,7 +33,7 @@
   font-size: 30px;
   font-weight: 400;
   line-height: 17.86px;
-  letter-spacing: -0.01rem;
+  letter-spacing: -0.017rem;
 }
 
 .quote__descr {
@@ -75,8 +75,25 @@
   outline: none;
 }
 
+.form-control:hover {
+  background-color: #8B1F1A;
+}
+
+.form-control:focus {
+  color: #8B1F1A;
+  background-color: #EB817C
+}
+
+/* .form-control:active {
+  background-color: #EB817C
+} */
+
 .form-control::-webkit-input-placeholder { 
-  color: #f48c8f 
+  color: #f48c8f
+}
+
+.form-control:focus::-webkit-input-placeholder { 
+  color: #8B1F1A;
 }
 
 input.form-inpt {
@@ -102,8 +119,18 @@ input.form-inpt {
   font-weight: 400;
   line-height: 21.56px;
   border: none;
+  outline: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #8B1F1A;
+}
+
+.form-button:active {
+  color: #8B1F1A;
+  background-color: #EB817C;
 }
 
 .quote__contacts {
@@ -148,15 +175,23 @@ input.form-inpt {
 }
 
 .quote__contacts__location {
-  padding-top: 25px;
-  padding-left: 4px;
-  letter-spacing: -0.013rem;
+  position: relative;
+  display: block;
+  padding-top: 24px;
+  padding-left: 24px;
+  letter-spacing: -0.01rem;
 }
 
+.quote__contacts__location span {
+  position: absolute;
+  top: 25px;
+  left: 3px;
+}
 
 .quote__contacts__email {
   position: relative;
   display: block;
+  padding-top: 1px;
   padding-left: 2px;
   letter-spacing: -0.003rem;
   padding-left: 25px;
@@ -164,20 +199,30 @@ input.form-inpt {
 
 .quote__contacts__email span {
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 0;
 }
 
 .shp0 {
-  
   fill:#f0d8d9;
 }
 
 .quote__contacts__phone {
   position: relative;
   display: block;
-  padding-left: 2px;
+  padding-left: 24px;
   letter-spacing: -0.01rem;
+}
+
+.quote__contacts__phone span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.quote__contacts__email:hover, 
+.quote__contacts__phone:hover {
+  color: #666d89;
 }
 
 /* footer */
@@ -205,8 +250,6 @@ input.form-inpt {
 .footer__social {
   display: -webkit-box;
   display: flex;
-  
-  /* padding-left: 5px; */
 }
 
 .footer__social a {
@@ -223,6 +266,15 @@ input.form-inpt {
   -webkit-box-align: center;
           align-items: center;
   margin-left: 8px;
+}
+
+.social {
+  fill: #666d89;
+}
+
+.footer__social a:hover, .footer__social a:hover .social {
+  fill: #f06c64;
+  border: 1px solid #f06c64;
 }
 
 .social__links {
