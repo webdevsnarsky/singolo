@@ -1,4 +1,4 @@
-@import "/singolo1.css" screen;
+@import "/singolo1.css";
 
 @font-face {
   font-family: 'LatoRegular';
@@ -63,6 +63,7 @@
   border: 1px solid #666d89;
   border-radius: 5px;
   margin-right: 4px;
+  outline: none;
   cursor: pointer;
 }
 
@@ -84,6 +85,7 @@
 .portfolio__btn:nth-of-type(4) {
   padding-left: 6px;
   margin-left: 1px;
+  letter-spacing: 0.008rem;
 }
 
 .portfolio___items {
@@ -202,9 +204,23 @@
   margin-right: 8px;
 }
 
-.social__links {
-  width: 14px;
-  height: 14px;
-  pointer-events: none;
-  color: #666d89;
+.icon {
+  fill: #666d89;
+}
+
+.person__social a:hover, .person__social a:hover .icon {
+  border: 1px solid #535767;
+  background-color: #535767;
+  fill: #ffffff;
+}
+
+
+object {
+  width: 15px;
+  height: 20px;
+}
+
+.svg:hover .social{
+  /* color: red; */
+  fill: #535767
 }
