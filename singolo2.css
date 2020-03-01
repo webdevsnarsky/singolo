@@ -31,9 +31,8 @@
   color: #666d89;
   font-family: "LatoBlack", sans-serif;;
   font-size: 30px;
-  font-weight: 400;
   line-height: 17.86px;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01rem;
 }
 
 .portfolio__descr {
@@ -41,7 +40,6 @@
   color: #767e9e;
   font-family: "Latolight", sans-serif;
   font-size: 18px;
-  font-weight: 300;
   line-height: 30px;
   letter-spacing: -0.013rem;
   text-align: justify;
@@ -57,7 +55,6 @@
   color: #767e9e;
   font-family: "LatoRegular", sans-serif;
   font-size: 12px;
-  font-weight: 400;
   line-height: 20.56px;
   background-color: transparent;
   border: 1px solid #666d89;
@@ -83,7 +80,7 @@
 }
 
 .portfolio__btn:nth-of-type(4) {
-  padding-left: 6px;
+  padding-left: 5px;
   margin-left: 1px;
   letter-spacing: 0.008rem;
 }
@@ -130,7 +127,6 @@
   color: #666d89;
   font-family: "LatoBlack", sans-serif;
   font-size: 30px;
-  font-weight: 400;
   line-height: 17.86px;
 }
 
@@ -140,7 +136,6 @@
   font-family: "LatoRegular", sans-serif;
   text-align: justify;
   font-size: 18px;
-  font-weight: 300;
   line-height: 30px;
   letter-spacing: -0.021rem;
 }
@@ -167,23 +162,22 @@
   color: #666d89;
   font-family: "LatoBlack", sans-serif;
   font-size: 18px;
-  font-weight: 400;
-  line-height: 17.86px;
+  line-height: 15.86px;
+  letter-spacing: -0.01rem;
 }
 
 .person__descr {
-  padding-top: 10px;
+  padding-top: 11px;
   color: #767e9e;
   font-family: "LatoRegular", sans-serif;
   font-size: 12px;
-  font-weight: 400;
   line-height: 21.56px;
   text-align: justify;
   letter-spacing: -0.003rem;
 }
 
 .person__social {
-  padding-top: 22px;
+  padding-top: 23px;
   display: -webkit-box;
   display: flex;
 }
