@@ -3,9 +3,355 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="singolo1.css">
   <title>Singolo</title>
 </head>
 <body>
-  
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__logo">
+          <a class="logo" href="#"><h1>Singolo</h1></a> 
+        </div>
+        <!-- header__logo -->
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li class="navigation__item"><a href="#">Home</a></li>
+            <li class="navigation__item"><a href="#">Services</a></li>
+            <li class="navigation__item"><a href="#">Portfolio</a></li>
+            <li class="navigation__item"><a href="#">About</a></li>
+            <li class="navigation__item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.header__content -->
+    </div>
+  </header>
+  <main class="main">
+    <section class="slider">
+      <div class="container">
+        <div class="slider__content">
+          <div class="slider__item">
+            <div class="vertical-phone">
+              <img src="assets/img/iPhone_vertical.png" alt="vertical-phone">
+            </div>
+            <div class="horizontal-phone">
+              <img src="assets/img/iPhone_horizontal.png" alt="horizontal-phone">
+            </div>
+          </div>
+          <div class="slider__pagination">
+            <img class="arrow-prev" src="assets/img/prev.png" alt="">
+            <img class="arrow-next" src="assets/img/next.png" alt="">
+          </div>
+        </div>
+        <!-- /.slider__content -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- slider -->
+    <section class="services">
+      <div class="container">
+        <div class="services__content">
+          <div class="services__text">
+            <h2 class="services__title">Our Services</h2>
+            <p class="services__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          </div>
+          <!-- /.services__text -->
+          <div class="services__advantages">
+            <div class="item">
+              <div class="item__img">
+                <img src="assets/img/pen.svg" alt="pen">
+              </div>
+              <div class="item__text">
+                <h3 class="item__title">Custom Design</h3>
+                <p class="item__descr">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="assets/img/lightbulb.svg" alt="lightbulb">
+              </div>
+              <div class="item__text">
+                <h3 class="item__title">Inovative Ideas</h3>
+                <p class="item__descr">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="assets/img/heart.svg" alt="heart">
+              </div>
+              <div class="item__text">
+                <h3 class="item__title">Love Is The Answer</h3>
+                <p class="item__descr">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="assets/img/phone.svg" alt="phone">
+              </div>
+              <div class="item__text">
+                <h3 class="item__title">Responsive Layout</h3>
+                <p class="item__descr">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="assets/img/bubble.svg" alt="bubble">
+              </div>
+              <div class="item__text">
+                <h3 class="item__title">24 / 7 Support</h3>
+                <p class="item__descr">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__img">
+                <img src="assets/img/star.svg" alt="star">
+              </div>
+              <div class="item__text">
+                <h3 class="item__title">Feel Like A Star</h3>
+                <p class="item__descr">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+              </div>
+            </div>
+          </div>
+          <!-- /.services-advantages -->
+        </div>
+        <!-- /.services__content -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.services -->
+    <section class="portfolio">
+      <div class="container">
+        <div class="portfolio__content">
+          <div class="portfolio__text">
+            <h2 class="portfolio__title">Portfolio</h2>
+            <p class="portfolio__descr">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+          </div>
+          <div class="portfolio__filter">
+            <button class="portfolio__btn portfolio__btn-active">All</button>
+            <button class="portfolio__btn">Web Design</button>
+            <button class="portfolio__btn">Graphic Design</button>
+            <button class="portfolio__btn">Artwork</button>
+          </div>
+          <!-- /.portfolio__breadcrumbs -->
+          <div class="portfolio___items">
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-1.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-2.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-3.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-4.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-5.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-6.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-7.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-8.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-9.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-10.png" alt="" class="portfolio___img">
+           </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-11.png" alt="" class="portfolio___img">
+            </div>
+            <div class="portfolio___item">
+              <img src="assets/img/portfolio/portfolio-img-12.png" alt="" class="portfolio___img">
+            </div>
+          </div>
+          <!-- portfolio___items -->
+        </div>
+        <!-- content -->
+      </div>
+    </section>
+    <section class="about">
+      <div class="container">
+        <div class="about__content">
+          <div class="about__text">
+            <h2 class="about__title">About Us</h2>
+            <p class="about__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          </div>
+          <!-- about__text -->
+          <div class="about__persons">
+            <div class="about__person">
+              <div class="person__image">
+                <img src="assets/img/about/about-person-1.png" alt="person">
+              </div>
+              <div class="person__text">
+                <h3 class="person__title">Adam Jensen</h3>
+                <p class="person__descr">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+              </div>
+              <div class="person__social">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 180" width="8" height="20" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                      <path class="icon" d="M100 31.29L71.43 31.29C68.06 31.29 64.29 35.73 64.29 41.68L64.29 62.31L100 62.31L100 91.71L64.29 91.71L64.29 180L30.57 180L30.57 91.71L0 91.71L0 62.31L30.57 62.31L30.57 45C30.57 20.18 47.79 0 71.43 0L100 0L100 31.29Z" />
+                  </svg></a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 175" width="14" height="20" fill-rule="evenodd">
+                      <path class="icon" d="M179.22 68.82L179.22 87.82L149.22 87.82L149.22 117.82L130.22 117.82L130.22 87.82L100.22 87.82L100.22 68.82L130.22 68.82L130.22 38.82L149.22 38.82L149.22 68.82L179.22 68.82ZM56.01 0L102 0L102 1C102 6.15 92.77 7.13 86.46 7.99C84.34 8.28 80.05 8.73 78.83 9.36C90.47 15.56 92.36 25.34 92.36 39.92C92.36 56.5 85.87 65.27 78.98 71.43C74.73 75.24 71.36 78.25 71.36 82.25C71.36 86.18 75.97 90.22 81.3 94.89C90.03 102.57 102 113.07 102 130.72C102 148.99 94.14 162.06 78.66 169.57C66.73 175.37 53.88 176 48.91 176C47.96 176 47.41 175.98 47.32 175.98C47.32 175.98 46.97 175.99 46.36 175.99C38.62 175.99 0 174.2 0 139.03C0 104.47 42.05 101.78 54.94 101.78L55.27 101.78C47.83 91.85 49.37 81.82 49.37 81.82C48.71 81.86 47.77 81.9 46.59 81.9C41.73 81.9 32.38 81.13 24.33 75.94C14.5 69.61 9.51 58.82 9.51 43.89C9.51 1.72 55.55 0.01 56.01 0ZM54.43 110.79C53.4 110.79 52.37 110.83 51.33 110.89C42.53 111.54 34.44 114.83 28.55 120.17C22.74 125.44 19.77 132.06 20.19 138.8C21.07 152.85 36.18 161.11 54.53 159.77C72.59 158.46 84.62 148.08 83.74 134.01C82.91 120.77 71.41 110.79 54.43 110.79ZM47.23 12.47C45.93 12.47 44.63 12.65 43.38 13C38.18 14.47 34.05 18.81 31.75 25.25C29.41 31.8 29.25 38.6 31.28 46.39C34.93 60.25 44.79 70.31 54.73 70.31C56.04 70.31 57.33 70.13 58.58 69.78C69.43 66.72 76.25 50.13 71.73 34.26C66.95 17.45 59.23 12.47 47.23 12.47Z" />
+                  </svg>
+                </a>
+                <a href="#"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 150" width="14" height="20" fill-rule="evenodd">
+                      <path class="icon" d="M184 18.16C177.23 21.17 169.95 23.2 162.32 24.11C170.11 19.44 176.1 12.04 178.92 3.22C171.62 7.55 163.54 10.69 154.95 12.38C148.06 5.05 138.25 0.46 127.39 0.46C106.54 0.46 89.64 17.37 89.64 38.21C89.64 41.17 89.97 44.05 90.62 46.81C59.25 45.24 31.42 30.21 12.81 7.37C9.56 12.95 7.7 19.43 7.7 26.35C7.7 39.45 14.36 51 24.49 57.77C18.3 57.58 12.48 55.88 7.39 53.05C7.39 53.21 7.39 53.37 7.39 53.53C7.39 71.82 20.4 87.07 37.67 90.54C34.5 91.4 31.17 91.87 27.72 91.87C25.29 91.87 22.93 91.63 20.62 91.19C25.43 106.19 39.37 117.1 55.89 117.4C42.96 127.53 26.69 133.57 9 133.57C5.96 133.57 2.95 133.39 0 133.03C16.7 143.75 36.54 150 57.87 150C127.3 150 165.27 92.47 165.27 42.59C165.27 40.96 165.24 39.33 165.16 37.7C172.54 32.38 178.94 25.74 184 18.16Z" />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 177" width="14" height="20" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                      <path class="icon" fill-rule="nonzero" d="M1.01 53.2L39.5 53.2L39.5 177L1.01 177L1.01 53.2ZM40.76 18.77C40.76 29.4 32.91 38.01 20 38.01C7.85 38.01 0 29.4 0 18.77C0 7.88 8.1 -0.48 20.5 -0.48C32.91 -0.48 40.51 7.88 40.76 18.77ZM62.52 92.69C62.52 77.25 62.02 64.34 61.52 53.2L94.93 53.2L96.71 70.41L97.47 70.41C102.53 62.31 114.93 50.41 135.7 50.41C161.01 50.41 180 67.38 180 103.83L180 177L141.52 177L141.52 108.39C141.52 92.44 135.95 81.56 122.02 81.56C111.39 81.56 105.06 88.9 102.28 95.98C101.26 98.51 101.01 102.06 101.01 105.61L101.01 177L62.52 177L62.52 92.69Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="about__person">
+              <div class="person__image">
+                <img src="assets/img/about/about-person-2.png" alt="person">
+              </div>
+              <div class="person__text">
+                <h3 class="person__title">Desmond Miles</h3>
+                <p class="person__descr">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+              </div>
+              <div class="person__social">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 180" width="8" height="20" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                      <path class="icon" d="M100 31.29L71.43 31.29C68.06 31.29 64.29 35.73 64.29 41.68L64.29 62.31L100 62.31L100 91.71L64.29 91.71L64.29 180L30.57 180L30.57 91.71L0 91.71L0 62.31L30.57 62.31L30.57 45C30.57 20.18 47.79 0 71.43 0L100 0L100 31.29Z" />
+                  </svg></a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 175" width="14" height="20" fill-rule="evenodd">
+                      <path class="icon" d="M179.22 68.82L179.22 87.82L149.22 87.82L149.22 117.82L130.22 117.82L130.22 87.82L100.22 87.82L100.22 68.82L130.22 68.82L130.22 38.82L149.22 38.82L149.22 68.82L179.22 68.82ZM56.01 0L102 0L102 1C102 6.15 92.77 7.13 86.46 7.99C84.34 8.28 80.05 8.73 78.83 9.36C90.47 15.56 92.36 25.34 92.36 39.92C92.36 56.5 85.87 65.27 78.98 71.43C74.73 75.24 71.36 78.25 71.36 82.25C71.36 86.18 75.97 90.22 81.3 94.89C90.03 102.57 102 113.07 102 130.72C102 148.99 94.14 162.06 78.66 169.57C66.73 175.37 53.88 176 48.91 176C47.96 176 47.41 175.98 47.32 175.98C47.32 175.98 46.97 175.99 46.36 175.99C38.62 175.99 0 174.2 0 139.03C0 104.47 42.05 101.78 54.94 101.78L55.27 101.78C47.83 91.85 49.37 81.82 49.37 81.82C48.71 81.86 47.77 81.9 46.59 81.9C41.73 81.9 32.38 81.13 24.33 75.94C14.5 69.61 9.51 58.82 9.51 43.89C9.51 1.72 55.55 0.01 56.01 0ZM54.43 110.79C53.4 110.79 52.37 110.83 51.33 110.89C42.53 111.54 34.44 114.83 28.55 120.17C22.74 125.44 19.77 132.06 20.19 138.8C21.07 152.85 36.18 161.11 54.53 159.77C72.59 158.46 84.62 148.08 83.74 134.01C82.91 120.77 71.41 110.79 54.43 110.79ZM47.23 12.47C45.93 12.47 44.63 12.65 43.38 13C38.18 14.47 34.05 18.81 31.75 25.25C29.41 31.8 29.25 38.6 31.28 46.39C34.93 60.25 44.79 70.31 54.73 70.31C56.04 70.31 57.33 70.13 58.58 69.78C69.43 66.72 76.25 50.13 71.73 34.26C66.95 17.45 59.23 12.47 47.23 12.47Z" />
+                  </svg>
+                </a>
+                <a href="#"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 150" width="14" height="20" fill-rule="evenodd">
+                      <path class="icon" d="M184 18.16C177.23 21.17 169.95 23.2 162.32 24.11C170.11 19.44 176.1 12.04 178.92 3.22C171.62 7.55 163.54 10.69 154.95 12.38C148.06 5.05 138.25 0.46 127.39 0.46C106.54 0.46 89.64 17.37 89.64 38.21C89.64 41.17 89.97 44.05 90.62 46.81C59.25 45.24 31.42 30.21 12.81 7.37C9.56 12.95 7.7 19.43 7.7 26.35C7.7 39.45 14.36 51 24.49 57.77C18.3 57.58 12.48 55.88 7.39 53.05C7.39 53.21 7.39 53.37 7.39 53.53C7.39 71.82 20.4 87.07 37.67 90.54C34.5 91.4 31.17 91.87 27.72 91.87C25.29 91.87 22.93 91.63 20.62 91.19C25.43 106.19 39.37 117.1 55.89 117.4C42.96 127.53 26.69 133.57 9 133.57C5.96 133.57 2.95 133.39 0 133.03C16.7 143.75 36.54 150 57.87 150C127.3 150 165.27 92.47 165.27 42.59C165.27 40.96 165.24 39.33 165.16 37.7C172.54 32.38 178.94 25.74 184 18.16Z" />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 177" width="14" height="20" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                      <path class="icon" fill-rule="nonzero" d="M1.01 53.2L39.5 53.2L39.5 177L1.01 177L1.01 53.2ZM40.76 18.77C40.76 29.4 32.91 38.01 20 38.01C7.85 38.01 0 29.4 0 18.77C0 7.88 8.1 -0.48 20.5 -0.48C32.91 -0.48 40.51 7.88 40.76 18.77ZM62.52 92.69C62.52 77.25 62.02 64.34 61.52 53.2L94.93 53.2L96.71 70.41L97.47 70.41C102.53 62.31 114.93 50.41 135.7 50.41C161.01 50.41 180 67.38 180 103.83L180 177L141.52 177L141.52 108.39C141.52 92.44 135.95 81.56 122.02 81.56C111.39 81.56 105.06 88.9 102.28 95.98C101.26 98.51 101.01 102.06 101.01 105.61L101.01 177L62.52 177L62.52 92.69Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="about__person">
+              <div class="person__image">
+                <img src="assets/img/about/about-person-3.png" alt="person">
+              </div>
+              <div class="person__text">
+                <h3 class="person__title">Scolara Visari</h3>
+                <p class="person__descr">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+              </div>
+              <div class="person__social">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 180" width="8" height="20" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                      <path class="icon" d="M100 31.29L71.43 31.29C68.06 31.29 64.29 35.73 64.29 41.68L64.29 62.31L100 62.31L100 91.71L64.29 91.71L64.29 180L30.57 180L30.57 91.71L0 91.71L0 62.31L30.57 62.31L30.57 45C30.57 20.18 47.79 0 71.43 0L100 0L100 31.29Z" />
+                  </svg></a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 175" width="14" height="20" fill-rule="evenodd">
+                      <path class="icon" d="M179.22 68.82L179.22 87.82L149.22 87.82L149.22 117.82L130.22 117.82L130.22 87.82L100.22 87.82L100.22 68.82L130.22 68.82L130.22 38.82L149.22 38.82L149.22 68.82L179.22 68.82ZM56.01 0L102 0L102 1C102 6.15 92.77 7.13 86.46 7.99C84.34 8.28 80.05 8.73 78.83 9.36C90.47 15.56 92.36 25.34 92.36 39.92C92.36 56.5 85.87 65.27 78.98 71.43C74.73 75.24 71.36 78.25 71.36 82.25C71.36 86.18 75.97 90.22 81.3 94.89C90.03 102.57 102 113.07 102 130.72C102 148.99 94.14 162.06 78.66 169.57C66.73 175.37 53.88 176 48.91 176C47.96 176 47.41 175.98 47.32 175.98C47.32 175.98 46.97 175.99 46.36 175.99C38.62 175.99 0 174.2 0 139.03C0 104.47 42.05 101.78 54.94 101.78L55.27 101.78C47.83 91.85 49.37 81.82 49.37 81.82C48.71 81.86 47.77 81.9 46.59 81.9C41.73 81.9 32.38 81.13 24.33 75.94C14.5 69.61 9.51 58.82 9.51 43.89C9.51 1.72 55.55 0.01 56.01 0ZM54.43 110.79C53.4 110.79 52.37 110.83 51.33 110.89C42.53 111.54 34.44 114.83 28.55 120.17C22.74 125.44 19.77 132.06 20.19 138.8C21.07 152.85 36.18 161.11 54.53 159.77C72.59 158.46 84.62 148.08 83.74 134.01C82.91 120.77 71.41 110.79 54.43 110.79ZM47.23 12.47C45.93 12.47 44.63 12.65 43.38 13C38.18 14.47 34.05 18.81 31.75 25.25C29.41 31.8 29.25 38.6 31.28 46.39C34.93 60.25 44.79 70.31 54.73 70.31C56.04 70.31 57.33 70.13 58.58 69.78C69.43 66.72 76.25 50.13 71.73 34.26C66.95 17.45 59.23 12.47 47.23 12.47Z" />
+                  </svg>
+                </a>
+                <a href="#"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 150" width="14" height="20" fill-rule="evenodd">
+                      <path class="icon" d="M184 18.16C177.23 21.17 169.95 23.2 162.32 24.11C170.11 19.44 176.1 12.04 178.92 3.22C171.62 7.55 163.54 10.69 154.95 12.38C148.06 5.05 138.25 0.46 127.39 0.46C106.54 0.46 89.64 17.37 89.64 38.21C89.64 41.17 89.97 44.05 90.62 46.81C59.25 45.24 31.42 30.21 12.81 7.37C9.56 12.95 7.7 19.43 7.7 26.35C7.7 39.45 14.36 51 24.49 57.77C18.3 57.58 12.48 55.88 7.39 53.05C7.39 53.21 7.39 53.37 7.39 53.53C7.39 71.82 20.4 87.07 37.67 90.54C34.5 91.4 31.17 91.87 27.72 91.87C25.29 91.87 22.93 91.63 20.62 91.19C25.43 106.19 39.37 117.1 55.89 117.4C42.96 127.53 26.69 133.57 9 133.57C5.96 133.57 2.95 133.39 0 133.03C16.7 143.75 36.54 150 57.87 150C127.3 150 165.27 92.47 165.27 42.59C165.27 40.96 165.24 39.33 165.16 37.7C172.54 32.38 178.94 25.74 184 18.16Z" />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 177" width="14" height="20" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                      <path class="icon" fill-rule="nonzero" d="M1.01 53.2L39.5 53.2L39.5 177L1.01 177L1.01 53.2ZM40.76 18.77C40.76 29.4 32.91 38.01 20 38.01C7.85 38.01 0 29.4 0 18.77C0 7.88 8.1 -0.48 20.5 -0.48C32.91 -0.48 40.51 7.88 40.76 18.77ZM62.52 92.69C62.52 77.25 62.02 64.34 61.52 53.2L94.93 53.2L96.71 70.41L97.47 70.41C102.53 62.31 114.93 50.41 135.7 50.41C161.01 50.41 180 67.38 180 103.83L180 177L141.52 177L141.52 108.39C141.52 92.44 135.95 81.56 122.02 81.56C111.39 81.56 105.06 88.9 102.28 95.98C101.26 98.51 101.01 102.06 101.01 105.61L101.01 177L62.52 177L62.52 92.69Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="quote">
+      <div class="container">
+        <div class="quote__content">
+          <div class="quote__text">
+            <h2 class="quote__title">Get a Quote</h2>
+            <p class="quote__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          </div>
+          <!-- quote__text -->
+          <div class="quote__inner">
+            <div class="quote__form">
+              <form action="POST" class="form">
+                  <input name="name" type="text" placeholder="Name (Required)" class="form-control form-inpt" required>
+                  <input name="email" type="email" placeholder="Email (Required)" class="form-control form-inpt" required>
+                  <input name="subject" type="text" placeholder="Subject" class="form-control form-inpt">
+                  <textarea name="textarea" placeholder="Describe your project in detail..." class="form-control form-textarea"></textarea>
+                  <button type="submit" class="form-button">Submit</button>
+              </form>
+            </div>
+            <div class="quote__contacts">
+              <h3 class="quote__contacts__title">Contact Information</h3>
+              <p class="quote__contacts__descr">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+              <p class="quote__contacts__location">
+                <span>
+                <object data="assets/img/quote/location.svg" type="image/svg+xml"></object>
+              </span>Elm St. 14/05 Lost City 
+              </p>
+              <a href="tel:035283318635" class="quote__contacts__phone">
+                <span>
+                  <object data="assets/img/quote/phone.svg" type="image/svg+xml"></object>
+                </span>03528 331 86 35
+             </a>
+                <a href="mailto:info@singolo.com" class="quote__contacts__email">
+                <span>
+                  <object data="assets/img/quote/email.svg" type="image/svg+xml"></object>
+                </span>
+                info@singolo.com</a>
+            </div>
+          </div>
+          <!-- /.quote__form -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__copy">
+          <p class="footer__copy__text">&copy; Copyright 2013</p>
+        </div>
+        <div class="footer__social">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 180" width="8" height="20" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                <path class="social" d="M100 31.29L71.43 31.29C68.06 31.29 64.29 35.73 64.29 41.68L64.29 62.31L100 62.31L100 91.71L64.29 91.71L64.29 180L30.57 180L30.57 91.71L0 91.71L0 62.31L30.57 62.31L30.57 45C30.57 20.18 47.79 0 71.43 0L100 0L100 31.29Z" />
+            </svg></a>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 175" width="14" height="20" fill-rule="evenodd">
+                <path class="social" d="M179.22 68.82L179.22 87.82L149.22 87.82L149.22 117.82L130.22 117.82L130.22 87.82L100.22 87.82L100.22 68.82L130.22 68.82L130.22 38.82L149.22 38.82L149.22 68.82L179.22 68.82ZM56.01 0L102 0L102 1C102 6.15 92.77 7.13 86.46 7.99C84.34 8.28 80.05 8.73 78.83 9.36C90.47 15.56 92.36 25.34 92.36 39.92C92.36 56.5 85.87 65.27 78.98 71.43C74.73 75.24 71.36 78.25 71.36 82.25C71.36 86.18 75.97 90.22 81.3 94.89C90.03 102.57 102 113.07 102 130.72C102 148.99 94.14 162.06 78.66 169.57C66.73 175.37 53.88 176 48.91 176C47.96 176 47.41 175.98 47.32 175.98C47.32 175.98 46.97 175.99 46.36 175.99C38.62 175.99 0 174.2 0 139.03C0 104.47 42.05 101.78 54.94 101.78L55.27 101.78C47.83 91.85 49.37 81.82 49.37 81.82C48.71 81.86 47.77 81.9 46.59 81.9C41.73 81.9 32.38 81.13 24.33 75.94C14.5 69.61 9.51 58.82 9.51 43.89C9.51 1.72 55.55 0.01 56.01 0ZM54.43 110.79C53.4 110.79 52.37 110.83 51.33 110.89C42.53 111.54 34.44 114.83 28.55 120.17C22.74 125.44 19.77 132.06 20.19 138.8C21.07 152.85 36.18 161.11 54.53 159.77C72.59 158.46 84.62 148.08 83.74 134.01C82.91 120.77 71.41 110.79 54.43 110.79ZM47.23 12.47C45.93 12.47 44.63 12.65 43.38 13C38.18 14.47 34.05 18.81 31.75 25.25C29.41 31.8 29.25 38.6 31.28 46.39C34.93 60.25 44.79 70.31 54.73 70.31C56.04 70.31 57.33 70.13 58.58 69.78C69.43 66.72 76.25 50.13 71.73 34.26C66.95 17.45 59.23 12.47 47.23 12.47Z" />
+            </svg>
+          </a>
+          <a href="#"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 150" width="14" height="20" fill-rule="evenodd">
+                <path class="social" d="M184 18.16C177.23 21.17 169.95 23.2 162.32 24.11C170.11 19.44 176.1 12.04 178.92 3.22C171.62 7.55 163.54 10.69 154.95 12.38C148.06 5.05 138.25 0.46 127.39 0.46C106.54 0.46 89.64 17.37 89.64 38.21C89.64 41.17 89.97 44.05 90.62 46.81C59.25 45.24 31.42 30.21 12.81 7.37C9.56 12.95 7.7 19.43 7.7 26.35C7.7 39.45 14.36 51 24.49 57.77C18.3 57.58 12.48 55.88 7.39 53.05C7.39 53.21 7.39 53.37 7.39 53.53C7.39 71.82 20.4 87.07 37.67 90.54C34.5 91.4 31.17 91.87 27.72 91.87C25.29 91.87 22.93 91.63 20.62 91.19C25.43 106.19 39.37 117.1 55.89 117.4C42.96 127.53 26.69 133.57 9 133.57C5.96 133.57 2.95 133.39 0 133.03C16.7 143.75 36.54 150 57.87 150C127.3 150 165.27 92.47 165.27 42.59C165.27 40.96 165.24 39.33 165.16 37.7C172.54 32.38 178.94 25.74 184 18.16Z" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 177" width="14" height="20" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                <path class="social" fill-rule="nonzero" d="M1.01 53.2L39.5 53.2L39.5 177L1.01 177L1.01 53.2ZM40.76 18.77C40.76 29.4 32.91 38.01 20 38.01C7.85 38.01 0 29.4 0 18.77C0 7.88 8.1 -0.48 20.5 -0.48C32.91 -0.48 40.51 7.88 40.76 18.77ZM62.52 92.69C62.52 77.25 62.02 64.34 61.52 53.2L94.93 53.2L96.71 70.41L97.47 70.41C102.53 62.31 114.93 50.41 135.7 50.41C161.01 50.41 180 67.38 180 103.83L180 177L141.52 177L141.52 108.39C141.52 92.44 135.95 81.56 122.02 81.56C111.39 81.56 105.06 88.9 102.28 95.98C101.26 98.51 101.01 102.06 101.01 105.61L101.01 177L62.52 177L62.52 92.69Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
