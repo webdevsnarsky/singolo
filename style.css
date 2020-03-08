@@ -234,14 +234,13 @@ ol[class] {
 }
 
 .services__content {
-  padding: 72px 40px 66px;
+  padding: 72px 40px 67px;
 }
 
 .services__title {
   color: #666d89;
   font-family: "LatoBlack", sans-serif;
   font-size: 30px;
-  font-weight: 400;
   line-height: 17.86px;
 }
 
@@ -251,7 +250,6 @@ ol[class] {
   font-family: "LatoLight", sans-serif;
   text-align: justify;
   font-size: 18px;
-  font-weight: 300;
   line-height: 30px;
   letter-spacing: -0.013rem;
 }
@@ -306,7 +304,6 @@ ol[class] {
   color: #666d89;
   font-family: "LatoBlack", sans-serif;
   font-size: 18px;
-  font-weight: 400;
   line-height: 17.86px;
   white-space: nowrap;
   overflow: hidden;
@@ -316,7 +313,6 @@ ol[class] {
   color: #767e9e;
   font-family: "LatoRegular", sans-serif;
   font-size: 12px;
-  font-weight: 600;
   line-height: 21.56px;
   text-align: justify;
   padding-top: 10px;
@@ -345,7 +341,7 @@ ol[class] {
 }
 
 .portfolio__content {
-  padding: 73px 40px 53px;
+  padding: 73px 40px 52px;
 }
 
 .portfolio__title {
@@ -530,10 +526,10 @@ ol[class] {
 }
 
 
-object {
+/* object {
   width: 15px;
   height: 20px;
-}
+} */
 
 .svg:hover .social{
   fill: #535767
@@ -564,14 +560,13 @@ object {
 }
 
 .quote__content {
-  padding: 72px 40px 22px;
+  padding: 72px 40px 22.5px;
 }
 
 .quote__title {
   color: #f0d8d9;
   font-family: "LatoBlack", sans-serif;
   font-size: 30px;
-  font-weight: 400;
   line-height: 17.86px;
   letter-spacing: -0.017rem;
 }
@@ -581,7 +576,6 @@ object {
   color: #f0d8d9;
   font-family: "Latolight", sans-serif;
   font-size: 18px;
-  font-weight: 300;
   line-height: 30px;
   text-align: justify;
   letter-spacing: -0.013rem;
@@ -609,7 +603,6 @@ object {
   color: #f48c8f;
   font-family: "LatoRegular", sans-serif;
   font-size: 12px;
-  font-weight: 400;
   line-height: 21.56px;
   padding-left: 15px;
   outline: none;
@@ -656,7 +649,6 @@ input.form-inpt {
   background-color: #d6564f;
   font-family: "LatoRegular", sans-serif;
   font-size: 12px;
-  font-weight: 400;
   line-height: 21.56px;
   border: none;
   outline: none;
@@ -674,8 +666,7 @@ input.form-inpt {
 }
 
 .quote__contacts {
-  padding-top: 3px;
-
+  padding-top: 2px;
   max-width: 301px;
 }
 
@@ -683,25 +674,26 @@ input.form-inpt {
   color: #f0d8d9;
   font-family: "LatoBlack", sans-serif;
   font-size: 18px;
-  font-weight: 400;
   line-height: 17.86px;
   padding-left: 1px;
-  letter-spacing: 0.01rem;
+  /* letter-spacing: 0.01rem; */
 }
 
 .quote__contacts__descr {
-  padding-top: 9px;
+  padding-top: 10px;
+  font-family: "LatoRegular", sans-serif;
+  font-size: 12px;
   text-align: justify;
+  line-height: 22.26px;
+  color: #f0d8d9;
 }
 
-.quote__contacts__descr,
 .quote__contacts__location, 
 .quote__contacts__phone, 
 .quote__contacts__email {
   color: #f0d8d9;
   font-family: "LatoRegular", sans-serif;
   font-size: 12px;
-  font-weight: 400;
   line-height: 21.56px;
   text-decoration: none;
 }
@@ -717,14 +709,14 @@ input.form-inpt {
 .quote__contacts__location {
   position: relative;
   display: block;
-  padding-top: 24px;
+  padding-top: 22px;
   padding-left: 24px;
   letter-spacing: -0.01rem;
 }
 
 .quote__contacts__location span {
   position: absolute;
-  top: 25px;
+  top: 24px;
   left: 3px;
 }
 
@@ -733,7 +725,7 @@ input.form-inpt {
   display: block;
   padding-top: 1px;
   padding-left: 2px;
-  letter-spacing: -0.003rem;
+  letter-spacing: -0.009rem;
   padding-left: 25px;
 }
 
@@ -784,7 +776,7 @@ input.form-inpt {
   color: #666d89;
   font-family: "LatoRegular", sans-serif;
   font-size: 12px;
-  letter-spacing: -0.013rem;
+  letter-spacing: -0.018rem;
 }
 
 .footer__social {
