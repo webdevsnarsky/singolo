@@ -68,6 +68,13 @@ ol[class] {
   margin: 0 auto;
 
 }
+
+.stop-link {
+  position: absolute;
+  left: 0px;
+  top: -35px;
+  /* border: solid 1px red; */
+}
 /* HEADER */
 .header {
   background-color: #2D303A;
@@ -82,6 +89,31 @@ ol[class] {
   height: 6px;
   width: 100%;
   background-color: #323746;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.sticky + .main {
+  padding-top: 95px;
+}
+
+.header-bgc {
+  background-color: rgba(45, 48, 58, 0.75);
+}
+
+.header-bgc:after {
+  content: " ";
+  position: absolute; 
+  top: 89px;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background-color: rgba(45, 48, 58, 0.25);
 }
 
 .header__content {
@@ -155,7 +187,7 @@ ol[class] {
   letter-spacing: -0.005rem;
 }
 
-.navigation__item a:hover {
+.navigation__item a.active, .navigation__item a:hover{
   color: #f06c64;
 }
 
@@ -178,17 +210,18 @@ ol[class] {
 
 .slider__content {
   position: relative;
-  padding: 30px 0 41px;
+  /* padding: 30px 0 41px; */
 }
 
 .slider__item {
+  position: relative;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-  padding: 23px 0;
+  padding: 53px 0 64px;
 }
 
 .vertical-phone {
@@ -196,6 +229,7 @@ ol[class] {
   height: 483px;
   margin-right: 32px;
   margin-left: 2px;
+  cursor: pointer;
 }
 
 .horizontal-phone {
@@ -203,6 +237,29 @@ ol[class] {
   height: 240px;
   margin-left: 41px;
   margin-bottom: 1px;
+  cursor: pointer;
+}
+
+.vertical-phone-black {
+  position: absolute;
+  top: 118px;
+  left: 126px;
+  width: 189px;
+  height: 334px;
+  background-color: #000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.horizontal-phone-black {
+  position: absolute;
+  top: 187px;
+  right: 201px;
+  width: 334px;
+  height: 189px;
+  background-color: #000000;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .arrow-prev {
@@ -414,8 +471,15 @@ ol[class] {
 }
 
 .portfolio___item {
+  width: 220px;
+  height: 187px;
   margin-right: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.portfolio___item-border {
+  border: 5px solid #f06c64;
 }
 
 .portfolio___item:nth-of-type(4), .portfolio___item:nth-of-type(8), .portfolio___item:nth-of-type(12)  {
