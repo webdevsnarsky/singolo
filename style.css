@@ -63,6 +63,7 @@ ol[class] {
 }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 1020px;
   margin: 0 auto;
@@ -95,7 +96,7 @@ ol[class] {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 9;
 }
 
 .sticky + .main {
@@ -195,6 +196,7 @@ ol[class] {
 
 .slider {
   position: relative;
+  height: 600px;
   background-color: #f06c64;
 }
 
@@ -210,10 +212,28 @@ ol[class] {
 
 .slider__content {
   position: relative;
-  /* padding: 30px 0 41px; */
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, 50%); */
+  z-index: 1;
 }
 
 .slider__item {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  animation: 0.5s ease-in-out;
+}
+
+.slider__item.active, .slider__item.next {
   position: relative;
   display: -webkit-box;
   display: flex;
@@ -222,6 +242,13 @@ ol[class] {
   -webkit-box-pack: center;
           justify-content: center;
   padding: 53px 0 64px;
+  width: 1020px;
+}
+
+.slider__item.next { 
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 .vertical-phone {
@@ -260,7 +287,68 @@ ol[class] {
   border-radius: 3px;
 }
 
-.arrow-prev {
+.control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  cursor: pointer;
+}
+
+.control.left {
+  left: 42px;
+  right: auto;
+}
+
+.control.right {
+  left: auto;
+  right: -97px;
+}
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70%);
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-duration: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-duration: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* .arrow-prev {
   position: absolute;
   top: 281px;
   left: 42px;
@@ -272,7 +360,7 @@ ol[class] {
   top: 281px;
   right: 40px;
   cursor: pointer;
-}
+} */
 
 /* footer  */
 .services {
@@ -899,7 +987,7 @@ input.form-inpt {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -936,10 +1024,6 @@ input.form-inpt {
   white-space: pre-wrap;
 }
 
-/* .popup p:nth-child(3) span {
-  white-space: pre-wrap;
-
-} */
 
 .popup__btn {
   display: block;
