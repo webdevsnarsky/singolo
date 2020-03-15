@@ -7,14 +7,18 @@ const header = document.querySelector('.header'),
       portfolioButton = portfolioFilter.querySelectorAll('button'),
       PortfolioItems = document.querySelector('.portfolio___items'),
       PortfolioImg = document.querySelectorAll('.portfolio___img'),
-      sliderItem = document.querySelectorAll('.slider__item')[0];  
+      sliderItem = document.querySelectorAll('.slider__item')[0],
+      getQuoteForm = document.querySelector('.form'),
+      formButton = document.querySelector('.form-button'),
+      formControl = document.querySelectorAll('.form-control'),
+      overlay = document.querySelector('.overlay'),
+      popupBtn = document.querySelector('.popup__btn'),
       sticky = header.offsetTop;
 
 let portfolioItems = document.querySelector('.portfolio___items');
 let arrayPortfolioItems = Array.from(portfolioItems.getElementsByClassName('portfolio___item'));
 
 window.addEventListener('load', () => {
-
   sectionScroll();
 });
 
@@ -22,7 +26,9 @@ document.addEventListener('click', clickHandler);
 portfolioFilter.addEventListener('click', clickHandlerFilter);
 document.addEventListener('click', clickHandlerPortfolioItems);
 sliderItem.addEventListener('click', clickHandlerPhones);
-
+getQuoteForm.addEventListener('submit', getModalWindow);
+// getQuoteForm.addEventListener('click', getModalWindow);
+popupBtn.addEventListener('click', removeModalWindow);
 // work with position of menu 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > sticky) {
@@ -94,32 +100,54 @@ function clickHandlerPortfolioItems() {
 
 function clickHandlerPhones() {
   let target = event.target;
-  // console.log('target: ', target);
+  let vertPhone = document.querySelector('.vertical-phone-black');
+  let horPhone = document.querySelector('.horizontal-phone-black');
 
   if (target.classList.contains('vertical-phone-img')) {
+ 
+      event.preventDefault();
+      if (!vertPhone) {
+        let verticalPhoneBlack = document.createElement('div');
+      sliderItem.appendChild(verticalPhoneBlack);
+      verticalPhoneBlack.classList.add('vertical-phone-black');
+      }
+      
+      if (vertPhone) {
+        vertPhone.remove(); 
+      } 
+  }
+
+   if (target.classList.contains('horizontal-phone-img')) {
     event.preventDefault();
-    let verticalPhoneBlack = document.createElement('div');
-    sliderItem.appendChild(verticalPhoneBlack);
-    verticalPhoneBlack.classList.add('vertical-phone-black');
-  }
-  
-  if (target.classList.contains('horizontal-phone-img')) {
-    event.preventDefault();
-    let horizontalPhoneBlack = document.createElement('div');
-    sliderItem.appendChild(horizontalPhoneBlack);
-    horizontalPhoneBlack.classList.add('horizontal-phone-black');
-  } 
+    if (!horPhone) {
+      let horizontalPhoneBlack = document.createElement('div');
+      sliderItem.appendChild(horizontalPhoneBlack);
+      horizontalPhoneBlack.classList.add('horizontal-phone-black');
+    }
 
-  if (target.classList.contains('vertical-phone-black')) { 
-    target.classList.remove('vertical-phone-black');
+    if (horPhone) {
+      horPhone.remove(); 
+    }
   }
 
-  if (target.classList.contains('horizontal-phone-black')) { 
-    target.classList.remove('horizontal-phone-black');
-  }
+ }
+ // work with form 
 
-  // if (target.classList.contains('vertical-phone-img')) {
-  //   target.classList.remove('vertical-phone-black');
-  // }
+function getModalWindow() {
+  let subject = document.getElementById('subject').value.toString();
+  let descrForm = document.getElementById('descrForm').value.toString();
+  let topicPopup = document.querySelector('.topic');
+  let popupDescr = document.querySelector('.popup__descr');
+  event.preventDefault();
+ 
+  topicPopup.innerText = subject || 'Без темы';
+  popupDescr.innerText = descrForm || 'Без описания';
 
+  overlay.classList.add('overlay-hidden');
 }
+
+function removeModalWindow() {
+  overlay.classList.remove('overlay-hidden');
+  formControl.forEach(el => el.value = '');
+}
+

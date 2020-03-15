@@ -298,9 +298,9 @@
             <div class="quote__form">
               <form action="POST" class="form">
                   <input name="name" type="text" placeholder="Name (Required)" class="form-control form-inpt" required>
-                  <input name="email" type="email" placeholder="Email (Required)" class="form-control form-inpt" required>
-                  <input name="subject" type="text" placeholder="Subject" class="form-control form-inpt">
-                  <textarea name="textarea" placeholder="Describe your project in detail..." class="form-control form-textarea"></textarea>
+                  <input id="email" name="email" type="email" placeholder="Email (Required)" class="form-control form-inpt" required>
+                  <input id="subject" name="subject" type="text" placeholder="Subject" class="form-control form-inpt">
+                  <textarea id="descrForm" name="textarea" placeholder="Describe your project in detail..." maxlength="300" class="form-control form-textarea"></textarea>
                   <button type="submit" class="form-button">Submit</button>
               </form>
             </div>
@@ -359,6 +359,15 @@
       </div>
     </div>
   </footer>
+
+  <div class="overlay">
+    <div class="popup">
+      <p class="popup__title">Письмо отправлено</p>
+      <p>Тема: <span class="topic"></span></p>
+      <p>Описание: <span class="popup__descr"></span></p>
+      <button class="popup__btn">OK</button>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
