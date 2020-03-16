@@ -15,8 +15,11 @@ const header = document.querySelector('.header'),
       popupBtn = document.querySelector('.popup__btn'),
       sticky = header.offsetTop;
 
-let portfolioItems = document.querySelector('.portfolio___items');
-let arrayPortfolioItems = Array.from(portfolioItems.getElementsByClassName('portfolio___item'));
+let portfolioItems = document.querySelector('.portfolio___items'),
+    arrayPortfolioItems = Array.from(portfolioItems.getElementsByClassName('portfolio___item')),
+    items = document.querySelectorAll('.slider__item'),
+    currentItem = 0,
+    isEnabled = true;
 
 window.addEventListener('load', () => {
   sectionScroll();
@@ -29,7 +32,9 @@ sliderItem.addEventListener('click', clickHandlerPhones);
 getQuoteForm.addEventListener('submit', getModalWindow);
 // getQuoteForm.addEventListener('click', getModalWindow);
 popupBtn.addEventListener('click', removeModalWindow);
-// work with position of menu 
+
+
+// work with position of menu & scroll section
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
@@ -59,6 +64,7 @@ function sectionScroll() {
 
 function clickHandler() {
   let target = event.target;
+ 
 
   if (target.classList.contains('navigation__link')) {
     event.preventDefault();
@@ -78,6 +84,8 @@ function clickHandlerFilter() {
   }
 }
 
+
+// work with portfolio items
 function sortPortfolioItems() {
   let newArrPortfolioItems = arrayPortfolioItems.sort(() => Math.random() - 0.5);
   portfolioItems.innerHTML = '';
@@ -87,23 +95,24 @@ function sortPortfolioItems() {
 
 function clickHandlerPortfolioItems() {
   let target = event.target;
+  // let portfolioItemBorder = document.querySelector
 
   if (target.classList.contains('portfolio___img')) {
     event.preventDefault();
       PortfolioImg.forEach(el => el.classList.remove('portfolio___item-border'));
       target.classList.add('portfolio___item-border');
-  } else if (!target.classList.contains('portfolio___img')) {
+  } else if (!target.classList.contains('portfolio___img') && target.classList.contains('portfolio__item-border')) {
     PortfolioImg.forEach(el => el.classList.remove('portfolio___item-border'));
   }
 }
 
-
+// work with mob phones &  slider 
 function clickHandlerPhones() {
   let target = event.target;
   let vertPhone = document.querySelector('.vertical-phone-black');
   let horPhone = document.querySelector('.horizontal-phone-black');
 
-  if (target.classList.contains('vertical-phone-img')) {
+  if (target.classList.contains('vertical-phone-button')) {
  
       event.preventDefault();
       if (!vertPhone) {
@@ -117,7 +126,7 @@ function clickHandlerPhones() {
       } 
   }
 
-   if (target.classList.contains('horizontal-phone-img')) {
+   if (target.classList.contains('horizontal-phone-button')) {
     event.preventDefault();
     if (!horPhone) {
       let horizontalPhoneBlack = document.createElement('div');
@@ -140,8 +149,8 @@ function getModalWindow() {
   let popupDescr = document.querySelector('.popup__descr');
   event.preventDefault();
  
-  topicPopup.innerText = subject || 'Без темы';
-  popupDescr.innerText = descrForm || 'Без описания';
+  topicPopup.innerText = `Тема: ${subject}` || 'Без темы';
+  popupDescr.innerText = `Описание: ${descrForm}` || 'Без описания';
 
   overlay.classList.add('overlay-hidden');
 }
@@ -151,3 +160,51 @@ function removeModalWindow() {
   formControl.forEach(el => el.value = '');
 }
 
+// ====================== //
+
+function changeCurrentItem(n) {
+  currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+  isEnabled = false;
+  items[currentItem].classList.add(direction);
+  items[currentItem].addEventListener('animationend', function() {
+    this.classList.remove('slide-active', direction);
+  });
+}
+
+function showItem(direction) {
+  items[currentItem].classList.add('next', direction);
+  items[currentItem].addEventListener('animationend', function() {
+    this.classList.remove('next', direction);
+    this.classList.add('slide-active');
+    isEnabled = true;
+  });
+}
+
+function previousItem(n) {
+  hideItem('to-right');
+  changeCurrentItem(n - 1);
+  showItem('from-left');
+}
+
+function nextItem(n) {
+  hideItem('to-left');
+  changeCurrentItem(n + 1);
+  showItem('from-right');
+}
+
+document.querySelector('.control.left').addEventListener('click', function() {
+  if (isEnabled) {
+    previousItem(currentItem);
+    document.querySelector('.slider').classList.toggle('slider-bgc');
+  }
+});
+
+document.querySelector('.control.right').addEventListener('click', function() {
+  if (isEnabled) {
+    nextItem(currentItem);
+    document.querySelector('.slider').classList.toggle('slider-bgc');
+  }
+});

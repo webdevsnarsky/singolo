@@ -198,6 +198,7 @@ ol[class] {
   position: relative;
   height: 600px;
   background-color: #f06c64;
+  animation: 1.5s ease-in-out;
 }
 
 .slider::after {
@@ -210,10 +211,19 @@ ol[class] {
   background-color: #ea676b;
 }
 
-.slider__content {
-  position: relative;
+.slider-bgc {
+  background-color: #648BF0;
+  animation: 1.5s ease-in-out;
+}
+
+.slider-bgc::after {
+  content: " ";
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  height: 6px;
   width: 100%;
-  overflow: hidden;
+  background-color: #496ED0;
 }
 
 .carousel {
@@ -226,14 +236,20 @@ ol[class] {
   z-index: 1;
 }
 
+.slider__content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .slider__item {
   display: none;
   position: relative;
   margin: 0 auto;
-  animation: 0.5s ease-in-out;
+  animation: 1.5s ease-in-out;
 }
 
-.slider__item.active, .slider__item.next {
+.slide-active, .next {
   position: relative;
   display: -webkit-box;
   display: flex;
@@ -245,25 +261,51 @@ ol[class] {
   width: 1020px;
 }
 
-.slider__item.next { 
+.next { 
   position: absolute;
   width: 100%;
   top: 0;
 }
 
 .vertical-phone {
+  position: relative;
   width: 240px;
   height: 483px;
   margin-right: 32px;
   margin-left: 2px;
+  user-select: none;
+  /* cursor: pointer; */
+}
+
+.vertical-phone-button {
+  position: absolute;
+  bottom: 32px;
+  left: 85px;
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  border-radius: 25px;
   cursor: pointer;
 }
 
 .horizontal-phone {
+  position: relative;
   width: 484px;
   height: 240px;
   margin-left: 41px;
   margin-bottom: 1px;
+  user-select: none;
+  /* cursor: pointer; */
+}
+
+.horizontal-phone-button {
+  position: absolute;
+  bottom: 109px;
+  left: 7px;
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  border-radius: 25px;
   cursor: pointer;
 }
 
@@ -291,7 +333,7 @@ ol[class] {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 15%;
+  width: 6%;
   cursor: pointer;
 }
 
@@ -302,7 +344,7 @@ ol[class] {
 
 .control.right {
   left: auto;
-  right: -97px;
+  right: -5px;
 }
 
 .arrow {
@@ -318,12 +360,12 @@ ol[class] {
 
 .to-right {
   animation-name: right;
-  animation-duration: reverse;
+  animation-direction: reverse;
 }
 
 .from-left {
   animation-name: left;
-  animation-duration: reverse;
+  animation-direction: reverse;
 }
 
 .from-right {
@@ -1014,14 +1056,16 @@ input.form-inpt {
 
 .popup p:nth-child(2) {
   margin-bottom: 10px;
+  word-break: break-all;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .popup p:nth-child(3) {
-  overflow: hidden;
+  word-break: break-all;
+  overflow-y: auto;
+  overflow-x: hidden;
   text-overflow: ellipsis;
-  white-space: pre-wrap;
 }
 
 
