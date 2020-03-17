@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Singolo</title>
 </head>
-<body>
+<body id="home" class="anchor">
   <header class="header">
     <div class="container">
       <div class="header__content">
@@ -16,11 +16,11 @@
         <!-- header__logo -->
         <nav class="header__navigation">
           <ul class="navigation">
-            <li class="navigation__item"><a href="#">Home</a></li>
-            <li class="navigation__item"><a href="#">Services</a></li>
-            <li class="navigation__item"><a href="#">Portfolio</a></li>
-            <li class="navigation__item"><a href="#">About</a></li>
-            <li class="navigation__item"><a href="#">Contact</a></li>
+            <li class="navigation__item"><a class="navigation__link active" href="#home">Home</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#services">Services</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#portfolio">Portfolio</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -30,21 +30,35 @@
   <main class="main">
     <section class="slider">
       <div class="container">
+       <div class="carousel">
         <div class="slider__content">
-          <div class="slider__item">
+          <div class="slider__item slide-active">
             <div class="vertical-phone">
-              <img src="assets/img/slider/iPhone_vertical.png" alt="vertical-phone">
+              <img src="assets/img/slider/iPhone_vertical.png" alt="vertical-phone" class="vertical-phone-img">
+              <div class="vertical-phone-button"></div>
             </div>
             <div class="horizontal-phone">
-              <img src="assets/img/slider/iPhone_horizontal.png" alt="horizontal-phone">
+              <img src="assets/img/slider/iPhone_horizontal.png" alt="horizontal-phone" class="horizontal-phone-img">
+              <div class="horizontal-phone-button"></div>
             </div>
           </div>
-          <div class="slider__pagination">
-            <img class="arrow-prev" src="assets/img/slider/prev.png" alt="">
-            <img class="arrow-next" src="assets/img/slider/next.png" alt="">
+          <div class="slider__item">
+            <object class="blue-phones" data="assets/img/slider/slide-2.svg" type="image/svg+xml"></object>
+          </div>
+          <div class="control left">
+            <div class="arrow left">
+              <img src="assets/img/slider/arrow-left.png" alt="arrow-left">
+            </div>
+          </div>
+          <div class="control right">
+            <div class="arrow right">
+              <img src="assets/img/slider/arrow-right.png" alt="arrow-right">
+            </div>
           </div>
         </div>
         <!-- /.slider__content -->
+       </div>
+       <!-- /.carousel -->
       </div>
       <!-- /.container -->
     </section>
@@ -52,6 +66,7 @@
     <section class="services">
       <div class="container">
         <div class="services__content">
+          <a class="stop-link anchor" id="services">&nbsp;</a>
           <div class="services__text">
             <h2 class="services__title">Our Services</h2>
             <p class="services__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -123,6 +138,7 @@
     <section class="portfolio">
       <div class="container">
         <div class="portfolio__content">
+          <a class="stop-link anchor" id="portfolio">&nbsp;</a>
           <div class="portfolio__text">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__descr">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -136,40 +152,40 @@
           <!-- /.portfolio__breadcrumbs -->
           <div class="portfolio___items">
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-1.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-1.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-2.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-2.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-3.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-3.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-4.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-4.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-5.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-5.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-6.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-6.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-7.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-7.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-8.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-8.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-9.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-9.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-10.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-10.png" alt="image" class="portfolio___img">
            </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-11.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-11.png" alt="image" class="portfolio___img">
             </div>
             <div class="portfolio___item">
-              <img src="assets/img/portfolio/portfolio-img-12.png" alt="" class="portfolio___img">
+              <img src="assets/img/portfolio/portfolio-img-12.png" alt="image" class="portfolio___img">
             </div>
           </div>
           <!-- portfolio___items -->
@@ -180,6 +196,7 @@
     <section class="about">
       <div class="container">
         <div class="about__content">
+          <a class="stop-link anchor" id="about">&nbsp;</a>
           <div class="about__text">
             <h2 class="about__title">About Us</h2>
             <p class="about__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -283,6 +300,7 @@
     <section class="quote">
       <div class="container">
         <div class="quote__content">
+          <a class="stop-link anchor" id="contact">&nbsp;</a>
           <div class="quote__text">
             <h2 class="quote__title">Get a Quote</h2>
             <p class="quote__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -292,9 +310,9 @@
             <div class="quote__form">
               <form action="POST" class="form">
                   <input name="name" type="text" placeholder="Name (Required)" class="form-control form-inpt" required>
-                  <input name="email" type="email" placeholder="Email (Required)" class="form-control form-inpt" required>
-                  <input name="subject" type="text" placeholder="Subject" class="form-control form-inpt">
-                  <textarea name="textarea" placeholder="Describe your project in detail..." class="form-control form-textarea"></textarea>
+                  <input id="email" name="email" type="email" placeholder="Email (Required)" class="form-control form-inpt" required>
+                  <input id="subject" name="subject" type="text" placeholder="Subject" class="form-control form-inpt">
+                  <textarea id="descrForm" name="textarea" placeholder="Describe your project in detail..." maxlength="300" class="form-control form-textarea"></textarea>
                   <button type="submit" class="form-button">Submit</button>
               </form>
             </div>
@@ -353,5 +371,15 @@
       </div>
     </div>
   </footer>
+
+  <div class="overlay">
+    <div class="popup">
+      <p class="popup__title">Письмо отправлено</p>
+      <p class="topic"></p>
+      <p class="popup__descr"></p>
+      <button class="popup__btn">OK</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
