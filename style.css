@@ -197,10 +197,13 @@ ol[class] {
 
 .slider {
   position: relative;
-  height: 600px;
+  /* height: 600px; */
   background-color: #f06c64;
   animation: 1.5s ease-in-out;
+  transition: background-color 0.5s;
 }
+
+/* width="517" height="483"  */
 
 .slider::after {
   content: " ";
@@ -227,15 +230,16 @@ ol[class] {
   background-color: #496ED0;
 }
 
-.carousel {
+/* .carousel {
   position: absolute;
   z-index: 1;
-}
+} */
 
 .slider__content {
   position: relative;
   width: 100%;
   overflow: hidden;
+  max-height: 600px;
 }
 
 .slider__item {
@@ -243,8 +247,13 @@ ol[class] {
   position: relative;
   margin: 0 auto;
   animation: 1s ease-in-out;
+  /* max-height: 600px; */
 }
 
+.blue-phones {
+  width: 61%;
+  height: 100%;
+}
 .slide-active, .next {
   position: relative;
   display: -webkit-box;
@@ -253,8 +262,8 @@ ol[class] {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-  padding: 53px 0 64px;
-  width: 1020px;
+  padding: 53px 10% 64px;
+  /* width: 1020px; */
 }
 
 .next { 
@@ -265,9 +274,9 @@ ol[class] {
 
 .vertical-phone {
   position: relative;
-  width: 240px;
-  height: 483px;
-  margin-right: 32px;
+  /* width: 240px;
+  height: 483px; */
+  margin-right: 9%;
   margin-left: 2px;
   user-select: none;
 }
@@ -285,9 +294,9 @@ ol[class] {
 
 .horizontal-phone {
   position: relative;
-  width: 484px;
-  height: 240px;
-  margin-left: 41px;
+  /* width: 484px;
+  height: 240px; */
+  /* margin-left: 41px; */
   margin-bottom: 1px;
   user-select: none;
 }
@@ -402,7 +411,7 @@ ol[class] {
 }
 
 .services__content {
-  padding: 72px 40px 67px;
+  padding: 72px 40px 36px;
 }
 
 .services__title {
@@ -436,31 +445,32 @@ ol[class] {
   display: -webkit-box;
   display: flex;
   max-width: 300px;
+  padding-bottom: 31px;
 }
 
 .item__img {
   padding-top: 1px;
 }
 
-.item:nth-of-type(4) {
+/* .item:nth-of-type(4) {
   margin-top: 31px;
-}
+} */
 
 .item:nth-of-type(4) .item__title,  .item:nth-of-type(5) .item__title {
   padding-top: 2px;
 }
 
-.item:nth-of-type(5) {
+/* .item:nth-of-type(5) {
   margin-top: 31px;
-}
+} */
 
 .item:nth-of-type(5)  .item__title {
   letter-spacing: -0.028rem;
 }
 
-.item:nth-of-type(6) {
+/* .item:nth-of-type(6) {
   margin-top: 31px;
-}
+} */
 
 .item__text {
   max-width: 240px;
@@ -1056,3 +1066,10 @@ input.form-inpt {
   padding: 5px 30px;
 }
 
+
+
+@media (max-width: 768px) {
+  .services__content {
+    padding: 39px 40px 36px;
+  }
+}
