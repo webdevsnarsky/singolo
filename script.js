@@ -130,14 +130,21 @@ function sortPortfolioItems() {
 function clickHandlerPortfolioItems() {
   let target = event.target;
   // let portfolioItemBorder = document.querySelector
+ 
 
-  if (target.classList.contains('portfolio___img')) {
+  if (target.classList.contains('portfolio___img') && (!target.classList.contains('portfolio__item-border'))) {
     event.preventDefault();
-      PortfolioImg.forEach(el => el.classList.remove('portfolio___item-border'));
-      target.classList.add('portfolio___item-border');
-  } else if (!target.classList.contains('portfolio___img') && target.classList.contains('portfolio__item-border')) {
-    PortfolioImg.forEach(el => el.classList.remove('portfolio___item-border'));
+      PortfolioImg.forEach(el => el.classList.remove('portfolio__item-border'));
+      target.classList.add('portfolio__item-border');
+  } else if (target.classList.contains('portfolio___img') && target.classList.contains('portfolio__item-border')) {
+    PortfolioImg.forEach(el => el.classList.remove('portfolio__item-border'));
   }
+  
+  if ((!target.classList.contains('portfolio___img'))) {
+    PortfolioImg.forEach(el => el.classList.remove('portfolio__item-border'));
+  }
+
+  
 }
 
 // work with mob phones &  slider 
