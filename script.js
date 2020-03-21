@@ -143,33 +143,35 @@ function clickHandlerPortfolioItems() {
 // work with mob phones &  slider 
 function clickHandlerPhones() {
   let target = event.target;
-  let vertPhone = document.querySelector('.vertical-phone-black');
-  let horPhone = document.querySelector('.horizontal-phone-black');
+  let vertPhone = document.querySelector('.vertical-phone');
+  let horPhone = document.querySelector('.horizontal-phone');
+  let vertPhoneCol = document.querySelector('.vertical-phone-black');
+  let horPhoneCol = document.querySelector('.horizontal-phone-black');
 
   if (target.classList.contains('vertical-phone-button')) {
  
       event.preventDefault();
-      if (!vertPhone) {
+      if (!vertPhoneCol) {
         let verticalPhoneBlack = document.createElement('div');
-      sliderItem.appendChild(verticalPhoneBlack);
+        vertPhone.appendChild(verticalPhoneBlack);
       verticalPhoneBlack.classList.add('vertical-phone-black');
       }
       
-      if (vertPhone) {
-        vertPhone.remove(); 
+      if (vertPhoneCol) {
+        vertPhoneCol.remove(); 
       } 
   }
 
    if (target.classList.contains('horizontal-phone-button')) {
     event.preventDefault();
-    if (!horPhone) {
+    if (!horPhoneCol) {
       let horizontalPhoneBlack = document.createElement('div');
-      sliderItem.appendChild(horizontalPhoneBlack);
+      horPhone.appendChild(horizontalPhoneBlack);
       horizontalPhoneBlack.classList.add('horizontal-phone-black');
     }
 
-    if (horPhone) {
-      horPhone.remove(); 
+    if (horPhoneCol) {
+      horPhoneCol.remove(); 
     }
   }
 
