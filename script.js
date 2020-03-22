@@ -13,7 +13,8 @@ const header = document.querySelector('.header'),
       formControl = document.querySelectorAll('.form-control'),
       overlay = document.querySelector('.overlay'),
       popupBtn = document.querySelector('.popup__btn'),
-      
+      hamburger = document.querySelector('.hamburger'),
+      headerNavigation = document.querySelector('.header__navigation'),
       sticky = header.offsetTop;
 
 let portfolioItems = document.querySelector('.portfolio___items'),
@@ -24,20 +25,6 @@ let portfolioItems = document.querySelector('.portfolio___items'),
     positions = [],
     arrOfClassAnchor = document.querySelectorAll('.anchor'),
     currentActive = null;
-
-window.addEventListener('load', () => {
-  sectionScroll();
-});
-
-document.addEventListener('click', clickHandler);
-portfolioFilter.addEventListener('click', clickHandlerFilter);
-document.addEventListener('click', clickHandlerPortfolioItems);
-sliderItem.addEventListener('click', clickHandlerPhones);
-getQuoteForm.addEventListener('submit', getModalWindow);
-popupBtn.addEventListener('click', removeModalWindow);
-
-
-
 
 
 
@@ -55,12 +42,10 @@ window.addEventListener('scroll', () => {
     header.classList.remove("header-bgc");
   }
 
-
   for(var i = 0; i < positions.length; i++){
     if(positions[i].top < window.pageYOffset) {
       if(currentActive !== i){
         currentActive = i;
-        // arrayNavLink.forEach(el => el.classList.remove('active'));
         arrayNavLink.forEach(el => {
           el.classList.remove('active')
           if (positions[i].id === el.getAttribute('href').split('#')[1]) {
@@ -200,7 +185,7 @@ function removeModalWindow() {
   formControl.forEach(el => el.value = '');
 }
 
-// ====================== //
+// work with slider //
 
 function changeCurrentItem(n) {
   currentItem = (n + items.length) % items.length;
@@ -240,13 +225,63 @@ function nextItem(n) {
 document.querySelector('.control.left').addEventListener('click', function() {
   if (isEnabled) {
     previousItem(currentItem);
-    
   }
 });
 
 document.querySelector('.control.right').addEventListener('click', function() {
   if (isEnabled) {
     nextItem(currentItem);
-    
   }
 });
+
+// work with mobile menu 
+function getNavMenu() {
+  let target = event.target;
+
+  // console.log('target: ', target);
+
+  if (!target.classList.contains('rotate') || target.classList.contains('hamburger__line') 
+  && hamburger.classList.contains('rotate')) {
+    headerNavigation.classList.add('header__navigation-active');
+    navigation.classList.add('navigation-active');
+    document.body.classList.add('scroll-hidden');
+    hamburger.classList.add('rotate');
+  } else if (target.classList.contains('rotate') 
+  || target.classList.contains('hamburger__line') && hamburger.classList.contains('rotate')) {
+    headerNavigation.classList.remove('header__navigation-active');
+    navigation.classList.remove('navigation-active');
+    document.body.classList.remove('scroll-hidden');
+    hamburger.classList.remove('rotate');
+  }
+}
+
+function removeNavMenu() {
+  let target = event.target;
+  console.log('target: ', target);
+
+  if (target.classList.contains('header__navigation') || target.classList.contains('hamburger')) {
+    event.preventDefault();
+    headerNavigation.classList.remove('header__navigation-active');
+    navigation.classList.remove('navigation-active');
+    document.body.classList.remove('scroll-hidden');
+    hamburger.classList.remove('rotate');
+  }
+
+  arrayNavLink.forEach(el => {
+    headerNavigation.classList.remove('header__navigation-active');
+    navigation.classList.remove('navigation-active');
+    document.body.classList.remove('scroll-hidden');
+    hamburger.classList.remove('rotate');
+  });
+}
+
+window.addEventListener('load', () => {sectionScroll()});
+document.addEventListener('click', clickHandler);
+portfolioFilter.addEventListener('click', clickHandlerFilter);
+document.addEventListener('click', clickHandlerPortfolioItems);
+sliderItem.addEventListener('click', clickHandlerPhones);
+getQuoteForm.addEventListener('submit', getModalWindow);
+popupBtn.addEventListener('click', removeModalWindow);
+hamburger.addEventListener('click', getNavMenu);
+headerNavigation.addEventListener('click', removeNavMenu);
+document.addEventListener("touchstart", function(){}, true);
