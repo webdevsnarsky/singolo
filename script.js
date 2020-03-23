@@ -238,16 +238,15 @@ document.querySelector('.control.right').addEventListener('click', function() {
 function getNavMenu() {
   let target = event.target;
 
-  // console.log('target: ', target);
+  console.log('target: ', target);
 
   if (!target.classList.contains('rotate') || target.classList.contains('hamburger__line') 
-  && hamburger.classList.contains('rotate')) {
+  && !hamburger.classList.contains('rotate')) {
     headerNavigation.classList.add('header__navigation-active');
     navigation.classList.add('navigation-active');
     document.body.classList.add('scroll-hidden');
     hamburger.classList.add('rotate');
-  } else if (target.classList.contains('rotate') 
-  || target.classList.contains('hamburger__line') && hamburger.classList.contains('rotate')) {
+  } else if (target.classList.contains('rotate')) {
     headerNavigation.classList.remove('header__navigation-active');
     navigation.classList.remove('navigation-active');
     document.body.classList.remove('scroll-hidden');
@@ -259,7 +258,7 @@ function removeNavMenu() {
   let target = event.target;
   console.log('target: ', target);
 
-  if (target.classList.contains('header__navigation') || target.classList.contains('hamburger')) {
+  if (target.classList.contains('header__navigation')) {
     event.preventDefault();
     headerNavigation.classList.remove('header__navigation-active');
     navigation.classList.remove('navigation-active');
