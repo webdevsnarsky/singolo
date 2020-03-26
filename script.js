@@ -125,6 +125,8 @@ function clickHandlerPortfolioItems() {
   if ((!target.classList.contains('portfolio___img'))) {
     PortfolioImg.forEach(el => el.classList.remove('portfolio__item-border'));
   }
+
+  
 }
 
 // work with mob phones &  slider 
