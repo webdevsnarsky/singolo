@@ -915,8 +915,8 @@ input.form-inpt {
 
 .form-button {
   padding: 7px 15px;
-  color: #f48c8f;
-  background-color: #d6564f;
+  color: #886A30;
+  background-color: #FBC65F;
   font-family: "LatoRegular", sans-serif;
   font-size: 12px;
   line-height: 21.56px;
@@ -924,6 +924,7 @@ input.form-inpt {
   outline: none;
   border-radius: 5px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .form-button:hover {
@@ -1204,6 +1205,27 @@ MEDIA */
   .blue-phones {
     width: 60.96%;
   }
+
+  .portfolio__content {
+    padding: 65px 40px 53px;
+  }
+
+  .about__content {
+    padding: 72px 40px 75px;
+  }
+
+  .quote__content {
+    padding: 55px 40px 45px;
+  }
+
+  .quote__inner {
+    padding-top: 20px;
+  }
+
+  .form-textarea {
+    min-height: 150px;
+    max-height: 160px;
+  }
 }
 
 @media screen and (max-width: 730px) { 
@@ -1395,8 +1417,21 @@ MEDIA */
     width: 60.70%;
   }
 
+  .vertical-phone-black {
+    top: 13.4%;
+    width: 78.8%;
+    height: 69.5%;
+
+  }
+
   .services__content {
-    padding: 30px 40px 0px;
+    padding: 30px 8% 0px;
+  }
+
+  .horizontal-phone-black {
+    right: 18%;
+    width: 70%;
+    height: 79%;
   }
 
   .item {

@@ -87,7 +87,6 @@ function clickHandler() {
 
   if (target.classList.contains('navigation__link')) {
     event.preventDefault();
-    // arrayNavLink.forEach(el => el.classList.remove('active'));
     target.classList.add('active');
   }
 }
@@ -114,7 +113,6 @@ function sortPortfolioItems() {
 
 function clickHandlerPortfolioItems() {
   let target = event.target;
-  // let portfolioItemBorder = document.querySelector
 
   if (target.classList.contains('portfolio___img') && (!target.classList.contains('portfolio__item-border'))) {
     event.preventDefault();
@@ -138,8 +136,8 @@ function clickHandlerPhones() {
   let horPhoneCol = document.querySelector('.horizontal-phone-black');
 
   if (target.classList.contains('vertical-phone-button')) {
- 
       event.preventDefault();
+      
       if (!vertPhoneCol) {
         let verticalPhoneBlack = document.createElement('div');
         vertPhone.appendChild(verticalPhoneBlack);
@@ -247,10 +245,7 @@ function getNavMenu() {
     document.body.classList.add('scroll-hidden');
     hamburger.classList.add('rotate');
   } else if (target.classList.contains('rotate')) {
-    headerNavigation.classList.remove('header__navigation-active');
-    navigation.classList.remove('navigation-active');
-    document.body.classList.remove('scroll-hidden');
-    hamburger.classList.remove('rotate');
+    removeElemOfMenu();
   }
 }
 
@@ -258,20 +253,16 @@ function removeNavMenu() {
   let target = event.target;
   console.log('target: ', target);
 
-  if (target.classList.contains('header__navigation')) {
-    event.preventDefault();
-    headerNavigation.classList.remove('header__navigation-active');
-    navigation.classList.remove('navigation-active');
-    document.body.classList.remove('scroll-hidden');
-    hamburger.classList.remove('rotate');
+  if (target.classList.contains('header__navigation') || target.classList.contains('navigation__link')) {
+    removeElemOfMenu();
   }
+}
 
-  arrayNavLink.forEach(el => {
-    headerNavigation.classList.remove('header__navigation-active');
-    navigation.classList.remove('navigation-active');
-    document.body.classList.remove('scroll-hidden');
-    hamburger.classList.remove('rotate');
-  });
+function removeElemOfMenu() {
+  headerNavigation.classList.remove('header__navigation-active');
+  navigation.classList.remove('navigation-active');
+  document.body.classList.remove('scroll-hidden');
+  hamburger.classList.remove('rotate');
 }
 
 window.addEventListener('load', () => {sectionScroll()});
