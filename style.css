@@ -1493,5 +1493,16 @@ MEDIA */
 
 }
 
+@media screen and (max-width: 368px) {
+  .portfolio__btn:nth-of-type(4) {
+    margin-top: 10px;
+  }
+
+  .portfolio___items {
+    padding-top: 15px;
+  }
+
+}
+
 
  
