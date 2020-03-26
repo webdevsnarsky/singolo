@@ -174,8 +174,8 @@ function getModalWindow() {
   let popupDescr = document.querySelector('.popup__descr');
   event.preventDefault();
  
-  topicPopup.innerText = `Тема: ${subject}` || 'Без темы';
-  popupDescr.innerText = `Описание: ${descrForm}` || 'Без описания';
+  topicPopup.innerText = `${(subject != '') ? `Тема: ${subject}` : 'Без темы'}`;
+  popupDescr.innerText = `${(descrForm != '') ? `Описание: ${descrForm}` : 'Без описания'}`;
 
   overlay.classList.add('overlay-hidden');
 }
