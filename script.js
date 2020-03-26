@@ -1,4 +1,3 @@
-
 const header = document.querySelector('.header'),
       navigation = document.querySelector('.navigation'),
       arrayNavLink = navigation.querySelectorAll('a'),
