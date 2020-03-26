@@ -13,7 +13,8 @@ const header = document.querySelector('.header'),
       formControl = document.querySelectorAll('.form-control'),
       overlay = document.querySelector('.overlay'),
       popupBtn = document.querySelector('.popup__btn'),
-      
+      hamburger = document.querySelector('.hamburger'),
+      headerNavigation = document.querySelector('.header__navigation'),
       sticky = header.offsetTop;
 
 let portfolioItems = document.querySelector('.portfolio___items'),
@@ -24,20 +25,6 @@ let portfolioItems = document.querySelector('.portfolio___items'),
     positions = [],
     arrOfClassAnchor = document.querySelectorAll('.anchor'),
     currentActive = null;
-
-window.addEventListener('load', () => {
-  sectionScroll();
-});
-
-document.addEventListener('click', clickHandler);
-portfolioFilter.addEventListener('click', clickHandlerFilter);
-document.addEventListener('click', clickHandlerPortfolioItems);
-sliderItem.addEventListener('click', clickHandlerPhones);
-getQuoteForm.addEventListener('submit', getModalWindow);
-popupBtn.addEventListener('click', removeModalWindow);
-
-
-
 
 
 
@@ -55,12 +42,10 @@ window.addEventListener('scroll', () => {
     header.classList.remove("header-bgc");
   }
 
-
   for(var i = 0; i < positions.length; i++){
     if(positions[i].top < window.pageYOffset) {
       if(currentActive !== i){
         currentActive = i;
-        // arrayNavLink.forEach(el => el.classList.remove('active'));
         arrayNavLink.forEach(el => {
           el.classList.remove('active')
           if (positions[i].id === el.getAttribute('href').split('#')[1]) {
@@ -102,7 +87,6 @@ function clickHandler() {
 
   if (target.classList.contains('navigation__link')) {
     event.preventDefault();
-    // arrayNavLink.forEach(el => el.classList.remove('active'));
     target.classList.add('active');
   }
 }
@@ -129,8 +113,6 @@ function sortPortfolioItems() {
 
 function clickHandlerPortfolioItems() {
   let target = event.target;
-  // let portfolioItemBorder = document.querySelector
- 
 
   if (target.classList.contains('portfolio___img') && (!target.classList.contains('portfolio__item-border'))) {
     event.preventDefault();
@@ -150,33 +132,35 @@ function clickHandlerPortfolioItems() {
 // work with mob phones &  slider 
 function clickHandlerPhones() {
   let target = event.target;
-  let vertPhone = document.querySelector('.vertical-phone-black');
-  let horPhone = document.querySelector('.horizontal-phone-black');
+  let vertPhone = document.querySelector('.vertical-phone');
+  let horPhone = document.querySelector('.horizontal-phone');
+  let vertPhoneCol = document.querySelector('.vertical-phone-black');
+  let horPhoneCol = document.querySelector('.horizontal-phone-black');
 
   if (target.classList.contains('vertical-phone-button')) {
- 
       event.preventDefault();
-      if (!vertPhone) {
+      
+      if (!vertPhoneCol) {
         let verticalPhoneBlack = document.createElement('div');
-      sliderItem.appendChild(verticalPhoneBlack);
+        vertPhone.appendChild(verticalPhoneBlack);
       verticalPhoneBlack.classList.add('vertical-phone-black');
       }
       
-      if (vertPhone) {
-        vertPhone.remove(); 
+      if (vertPhoneCol) {
+        vertPhoneCol.remove(); 
       } 
   }
 
    if (target.classList.contains('horizontal-phone-button')) {
     event.preventDefault();
-    if (!horPhone) {
+    if (!horPhoneCol) {
       let horizontalPhoneBlack = document.createElement('div');
-      sliderItem.appendChild(horizontalPhoneBlack);
+      horPhone.appendChild(horizontalPhoneBlack);
       horizontalPhoneBlack.classList.add('horizontal-phone-black');
     }
 
-    if (horPhone) {
-      horPhone.remove(); 
+    if (horPhoneCol) {
+      horPhoneCol.remove(); 
     }
   }
 
@@ -201,7 +185,7 @@ function removeModalWindow() {
   formControl.forEach(el => el.value = '');
 }
 
-// ====================== //
+// work with slider //
 
 function changeCurrentItem(n) {
   currentItem = (n + items.length) % items.length;
@@ -241,13 +225,55 @@ function nextItem(n) {
 document.querySelector('.control.left').addEventListener('click', function() {
   if (isEnabled) {
     previousItem(currentItem);
-    
   }
 });
 
 document.querySelector('.control.right').addEventListener('click', function() {
   if (isEnabled) {
     nextItem(currentItem);
-    
   }
 });
+
+// work with mobile menu 
+function getNavMenu() {
+  let target = event.target;
+
+  console.log('target: ', target);
+
+  if (!target.classList.contains('rotate') || target.classList.contains('hamburger__line') 
+  && !hamburger.classList.contains('rotate')) {
+    headerNavigation.classList.add('header__navigation-active');
+    navigation.classList.add('navigation-active');
+    document.body.classList.add('scroll-hidden');
+    hamburger.classList.add('rotate');
+  } else if (target.classList.contains('rotate')) {
+    removeElemOfMenu();
+  }
+}
+
+function removeNavMenu() {
+  let target = event.target;
+  console.log('target: ', target);
+
+  if (target.classList.contains('header__navigation') || target.classList.contains('navigation__link')) {
+    removeElemOfMenu();
+  }
+}
+
+function removeElemOfMenu() {
+  headerNavigation.classList.remove('header__navigation-active');
+  navigation.classList.remove('navigation-active');
+  document.body.classList.remove('scroll-hidden');
+  hamburger.classList.remove('rotate');
+}
+
+window.addEventListener('load', () => {sectionScroll()});
+document.addEventListener('click', clickHandler);
+portfolioFilter.addEventListener('click', clickHandlerFilter);
+document.addEventListener('click', clickHandlerPortfolioItems);
+sliderItem.addEventListener('click', clickHandlerPhones);
+getQuoteForm.addEventListener('submit', getModalWindow);
+popupBtn.addEventListener('click', removeModalWindow);
+hamburger.addEventListener('click', getNavMenu);
+headerNavigation.addEventListener('click', removeNavMenu);
+document.addEventListener("touchstart", function(){}, true);
